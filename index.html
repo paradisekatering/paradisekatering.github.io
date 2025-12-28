@@ -42,22 +42,9 @@
       background: var(--dark);
       border-bottom: 1px solid #222;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       padding: 15px 30px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo {
-      height: 48px;
-      width: auto;
-      opacity: 0.8;
-      filter: drop-shadow(0 0 6px rgba(0, 194, 110, 0.4));
     }
 
     .nav-links a {
@@ -215,7 +202,7 @@
       color: #aaa;
     }
 
-    /* TRANSLUCENT LOGO BACKGROUND */
+    /* TRANSLUCENT BACKGROUND LOGO */
     body::before {
       content: "";
       position: fixed;
@@ -225,7 +212,7 @@
       height: 100%;
       background:
         linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
-        url('images/logo-white.png') center center no-repeat; /* white logo for visibility */
+        url('images/logo-white.png') center center no-repeat; /* translucent logo */
       background-size: 40%;
       opacity: 0.6;
       pointer-events: none;
@@ -239,10 +226,6 @@
 
   <!-- NAVBAR -->
   <div class="navbar">
-    <div class="brand">
-      <img src="images/logo.png" class="logo" alt="Paradise Katering Logo">
-    </div>
-
     <div class="nav-links">
       <a href="#menu">Menu</a>
       <a href="#services">Services</a>
