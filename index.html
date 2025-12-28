@@ -107,7 +107,7 @@
 
     footer { text-align: center; padding: 25px; border-top: 1px solid #222; color: #aaa; }
 
-    /* Optional Watermark Logo Background */
+    /* Watermark Logo Background */
     body::before {
       content: "";
       position: fixed;
@@ -116,9 +116,9 @@
       width: 40vw;
       max-width: 400px;
       height: auto;
-      background: url('logo.png') center/contain no-repeat;
+      background: url('images/logo.png') center/contain no-repeat;
       transform: translate(-50%, -50%);
-      opacity: 0.05;        /* subtle watermark */
+      opacity: 0.1;        /* subtle watermark */
       pointer-events: none;
       z-index: 0;
     }
