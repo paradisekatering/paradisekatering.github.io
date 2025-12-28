@@ -57,45 +57,31 @@
       color: var(--green);
     }
 
-    /* HERO with logo in front of black background */
+    /* HERO with logo as title */
     .hero {
       background: var(--dark);
       height: 85vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
       position: relative;
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
+    .hero-logo {
       width: 300px;
-      height: 300px;
-      background: url('images/logo-white.png') center/contain no-repeat;
-      transform: translate(-50%, -50%);
-      opacity: 0.6;
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      color: var(--green);
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
+      max-width: 80%;
+      height: auto;
+      margin-bottom: 30px;
+      opacity: 0.8; /* slightly transparent */
     }
 
     .hero p {
       font-size: 1.2rem;
       max-width: 700px;
-      margin: 0 auto 25px;
+      margin-bottom: 25px;
+      color: #fff;
     }
 
     .btn {
@@ -237,11 +223,14 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Paradise Katering</h1>
-      <p>Corporate & private catering, private chef experiences, and unforgettable events.</p>
-      <a href="#contact" class="btn">Book Catering</a>
-    </div>
+    <img src="images/logo-white.png" alt="Paradise Katering Logo" class="hero-logo">
+    <p>
+      Paradise Katering delivers fresh, flavour-packed meals for every occasion. 
+      From intimate dinners and private chef experiences to large celebrations and corporate events, 
+      we provide high-quality dishes made with care. With reliable service, great presentation, and unforgettable taste, 
+      we make every event special. Our menu is crafted with love, using fresh ingredients and bold flavours to create meals your guests will truly remember.
+    </p>
+    <a href="#contact" class="btn">Book Catering</a>
   </section>
 
   <!-- MENU -->
