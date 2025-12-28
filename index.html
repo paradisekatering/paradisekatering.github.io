@@ -31,6 +31,7 @@
     section {
       padding: 80px 20px;
       scroll-margin-top: 90px;
+      position: relative; /* ensures logo stays behind content */
     }
 
     /* NAVBAR */
@@ -78,6 +79,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      position: relative;
     }
 
     .hero h1 {
@@ -186,11 +188,12 @@
       width: 100%;
       height: 100%;
       background: url('images/logo.png') center center no-repeat;
-      background-size: contain; /* keeps logo proportionate */
+      background-size: 40%; /* adjust size */
       opacity: 0.6; /* translucent */
-      pointer-events: none; /* allows clicking through */
-      z-index: -1; /* behind content */
+      pointer-events: none; /* allow clicks through */
+      z-index: -1; /* behind all content */
     }
+
   </style>
 </head>
 
@@ -233,9 +236,9 @@
   <section id="gallery" class="gallery">
     <h2>Gallery</h2>
     <div class="gallery-grid">
-      <img src="food1.jpg">
-      <img src="food2.jpg">
-      <img src="food3.jpg">
+      <img src="food1.jpg" alt="Food 1">
+      <img src="food2.jpg" alt="Food 2">
+      <img src="food3.jpg" alt="Food 3">
     </div>
   </section>
 
