@@ -6,6 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    /* BRAND LOGO */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 45px;
+  width: auto;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
     /* BASE */
     body {
       margin: 0;
@@ -24,28 +41,20 @@
       padding: 60px 20px;
     }
 
-    /* NAVBAR */
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #000;
-      border-bottom: 1px solid #222;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-    }
+   <!-- NAVBAR -->
+<div class="navbar">
+  <div class="brand">
+    <img src="logo.png" alt="Paradise Katering Logo" class="logo">
+    <span>Paradise Katering</span>
+  </div>
 
-    .navbar h2 {
-      color: #00c26e;
-      margin: 0;
-    }
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
 
-    .navbar a {
-      margin-left: 20px;
-      font-weight: bold;
-    }
 
     /* HERO */
     .hero {
