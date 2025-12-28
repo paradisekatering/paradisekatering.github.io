@@ -20,6 +20,7 @@
       background: var(--dark);
       color: var(--text);
       line-height: 1.6;
+      position: relative;
     }
 
     a {
@@ -52,12 +53,10 @@
     }
 
     .logo {
-  height: 48px;
-  width: auto;
-  opacity: 0.8;
-  filter: drop-shadow(0 0 6px rgba(0, 194, 110, 0.4));
-}
-
+      height: 48px;
+      width: auto;
+      opacity: 0.8;
+      filter: drop-shadow(0 0 6px rgba(0, 194, 110, 0.4));
     }
 
     .nav-links a {
@@ -177,37 +176,22 @@
       border-top: 1px solid #222;
       color: #aaa;
     }
-  </style
-    /* Set background image */
-    background-image: url('images/logo.png');
-    
-    /* Center the logo */
-    background-position: center;
-    
-    /* Prevent tiling */
-    background-repeat: no-repeat;
-    
-    /* Make it cover entire screen */
-    background-size: contain; /* or 'cover' if you want full coverage */
-    
-    /* Make it translucent */
-    opacity: 1; /* Keep page content visible */
-}
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('images/logo.png') center center no-repeat;
-    background-size: contain; /* or cover */
-    opacity: 0.6; /* Adjust transparency here */
-    pointer-events: none; /* Allow clicks through the logo */
-    z-index: -1; /* Behind content */
-}
-
+    /* BACKGROUND LOGO */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('images/logo.png') center center no-repeat;
+      background-size: contain; /* keeps logo proportionate */
+      opacity: 0.6; /* translucent */
+      pointer-events: none; /* allows clicking through */
+      z-index: -1; /* behind content */
+    }
+  </style>
 </head>
 
 <body>
@@ -215,7 +199,7 @@ body::before {
   <!-- NAVBAR -->
   <div class="navbar">
     <div class="brand">
-      <img src="logo.png" class="logo" alt="Paradise Katering Logo">
+      <img src="images/logo.png" class="logo" alt="Paradise Katering Logo">
     </div>
 
     <div class="nav-links">
