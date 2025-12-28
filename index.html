@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    /* RESET + BASE */
+    /* BASE */
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -17,50 +17,74 @@
 
     a {
       text-decoration: none;
+      color: inherit;
     }
 
-    /* HERO SECTION */
+    section {
+      padding: 60px 20px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #000;
+      border-bottom: 1px solid #222;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    .navbar h2 {
+      color: #00c26e;
+      margin: 0;
+    }
+
+    .navbar a {
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    /* HERO */
     .hero {
-      width: 100%;
       max-height: 80vh;
       overflow: hidden;
     }
 
     .hero img {
       width: 100%;
-      height: auto;
       display: block;
     }
 
-    /* CONTENT SECTION */
-    .content {
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #f5c400;
+      color: #000;
+      font-weight: bold;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+
+    /* INTRO */
+    .intro {
       text-align: center;
-      padding: 50px 20px;
       max-width: 900px;
       margin: auto;
     }
 
-    .content h1 {
+    .intro h1 {
       color: #00c26e;
       font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    .content p {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
     }
 
     /* SERVICES */
     .services {
       background: #111;
-      padding: 50px 20px;
-    }
-
-    .services h2 {
       text-align: center;
-      color: #f5c400;
-      margin-bottom: 30px;
     }
 
     .services ul {
@@ -76,89 +100,136 @@
       font-size: 1.1rem;
     }
 
-    /* BUTTON */
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      background: #f5c400;
-      color: #000;
-      font-weight: bold;
-      border-radius: 4px;
-      margin-top: 20px;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
-    }
-
-    /* CONTACT */
-    .contact {
-      padding: 50px 20px;
+    /* GALLERY */
+    .gallery {
       text-align: center;
     }
 
-    .contact h2 {
-      color: #00c26e;
-      margin-bottom: 15px;
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .contact p {
-      margin: 8px 0;
+    .gallery img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    /* REVIEWS */
+    .reviews {
+      background: #111;
+      text-align: center;
+    }
+
+    /* FORM */
+    form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 4px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
     }
 
     /* FOOTER */
     footer {
-      background: #111;
+      background: #000;
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
       color: #aaa;
+      border-top: 1px solid #222;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO IMAGE -->
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <h2>Paradise Katering</h2>
+    <div>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
   <section class="hero">
     <img src="paradise-katering.png" alt="Paradise Katering">
   </section>
 
   <!-- INTRO -->
-  <section class="content">
-    <h1>Paradise Katering</h1>
+  <section class="intro">
+    <h1>Exceptional Catering Experiences</h1>
     <p>
       Corporate & private catering, private chef experiences,
       and unforgettable special occasions.
     </p>
-
-    <a href="mailto:paradisekatering@gmail.com" class="btn">
-      Contact Us
-    </a>
+    <a href="#contact" class="btn">Book Now</a>
   </section>
 
   <!-- SERVICES -->
-  <section class="services">
+  <section id="services" class="services">
     <h2>Our Services</h2>
     <ul>
       <li>✔ Catering</li>
-      <li>✔ Corporate / Private Events</li>
+      <li>✔ Corporate & Private Events</li>
       <li>✔ Private Chef Experiences</li>
       <li>✔ Special Occasions</li>
     </ul>
   </section>
 
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="paradise-katering.png">
+      <img src="paradise-katering.png">
+      <img src="paradise-katering.png">
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews">
+    <h2>Customer Reviews</h2>
+    <p>We value your feedback!</p>
+    <a class="btn" href="https://www.google.com/search?q=Paradise+Katering+reviews" target="_blank">
+      Leave a Google Review
+    </a>
+  </section>
+
   <!-- CONTACT -->
-  <section class="contact">
-    <h2>Get in Touch</h2>
-    <p>📞 647-222-3351</p>
-    <p>📧 paradisekatering@gmail.com</p>
-    <p>📸 @paradise_katering</p>
+  <section id="contact">
+    <h2 style="text-align:center; color:#00c26e;">Contact & Booking</h2>
+
+    <form action="mailto:paradisekatering@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <input type="text" name="Event Date" placeholder="Event Date">
+      <textarea name="Message" placeholder="Tell us about your event"></textarea>
+      <button class="btn" type="submit">Send Inquiry</button>
+    </form>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    © 2025 Paradise Katering — Est. 2019
+    © 2025 Paradise Katering · Est. 2019 · 647-222-3351
   </footer>
 
 </body>
