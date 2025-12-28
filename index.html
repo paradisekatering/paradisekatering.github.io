@@ -34,11 +34,7 @@
       position: relative;
     }
 
-    /* NAVBAR */
-    .navbar {
-      position: sticky;
-
-    /* NAVBAR */
+    /* Navbar */
     .navbar {
       position: sticky;
       top: 0;
@@ -61,7 +57,7 @@
       color: var(--green);
     }
 
-    /* HERO with logo as title */
+    /* Hero */
     .hero {
       background: var(--dark);
       height: 85vh;
@@ -71,14 +67,8 @@
       justify-content: center;
       text-align: center;
       position: relative;
-    }
-
-    .hero-logo {
-      width: 300px;
-      max-width: 80%;
-      height: auto;
-      margin-bottom: 30px;
-      opacity: 0.8; /* slightly transparent */
+      max-width: 100%;
+      margin: 0 auto;
     }
 
     .hero p {
@@ -97,7 +87,7 @@
       border-radius: 4px;
     }
 
-    /* MENU SECTION */
+    /* Menu */
     .menu {
       background: var(--gray);
       text-align: center;
@@ -133,7 +123,7 @@
       color: var(--text);
     }
 
-    /* SERVICES */
+    /* Services */
     .services {
       background: var(--gray);
       text-align: center;
@@ -163,7 +153,7 @@
       color: var(--yellow);
     }
 
-    /* GALLERY */
+    /* Gallery */
     .gallery {
       text-align: center;
       background: var(--gray);
@@ -182,7 +172,7 @@
       border-radius: 6px;
     }
 
-    /* CONTACT */
+    /* Contact */
     .contact {
       background: var(--gray);
       text-align: center;
@@ -210,12 +200,28 @@
       color: #aaa;
     }
 
+    /* Background Logo Watermark */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 40vw;           /* responsive width */
+      max-width: 400px;      /* max size */
+      height: auto;
+      background: url('images/logo-white.png') center/contain no-repeat;
+      transform: translate(-50%, -50%);
+      opacity: 0.3;           /* watermark opacity */
+      pointer-events: none;    /* allow clicks through */
+      z-index: -1;            /* behind all content */
+    }
+
   </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
+  <!-- Navbar -->
   <div class="navbar">
     <div class="nav-links">
       <a href="#menu">Menu</a>
@@ -225,9 +231,8 @@
     </div>
   </div>
 
-  <!-- HERO -->
+  <!-- Hero -->
   <section class="hero">
-    <img src="logo.png" alt="logo.png" class="hero-logo">
     <p>
       Paradise Katering delivers fresh, flavour-packed meals for every occasion. 
       From intimate dinners and private chef experiences to large celebrations and corporate events, 
@@ -237,17 +242,17 @@
     <a href="#contact" class="btn">Book Catering</a>
   </section>
 
-  <!-- MENU -->
+  <!-- Menu -->
   <section id="menu" class="menu">
     <h2>Our Menu</h2>
     <div class="menu-grid">
       <div class="menu-card">
         <h3>Appetizers</h3>
-        <p>Fresh salads,Cocktail , and seasonal starters.</p>
+        <p>Fresh salads, bruschetta, and seasonal starters.</p>
       </div>
       <div class="menu-card">
         <h3>Main Courses</h3>
-        <p>Grilled meats, Seafood, pasta, and vegan options.</p>
+        <p>Grilled meats, seafood, pasta, and vegan options.</p>
       </div>
       <div class="menu-card">
         <h3>Desserts</h3>
@@ -260,7 +265,7 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
+  <!-- Services -->
   <section id="services" class="services">
     <h2>Our Services</h2>
     <div class="service-grid">
@@ -271,7 +276,7 @@
     </div>
   </section>
 
-  <!-- GALLERY -->
+  <!-- Gallery -->
   <section id="gallery" class="gallery">
     <h2>Gallery</h2>
     <div class="gallery-grid">
@@ -281,7 +286,7 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- Contact -->
   <section id="contact" class="contact">
     <h2>Contact & Booking</h2>
     <form action="mailto:paradisekatering@gmail.com" method="post" enctype="text/plain">
@@ -298,3 +303,4 @@
 
 </body>
 </html>
+
