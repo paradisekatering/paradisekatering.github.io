@@ -28,7 +28,7 @@
 
     section { padding: 80px 20px; scroll-margin-top: 90px; position: relative; }
 
-    /* Navbar */
+    /* Navbar with Logo as Header */
     .navbar {
       position: sticky;
       top: 0;
@@ -36,9 +36,15 @@
       background: var(--dark);
       border-bottom: 1px solid #222;
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: center;
       padding: 15px 30px;
+    }
+
+    .navbar .logo {
+      height: 60px;        /* adjust size */
+      width: auto;
+      opacity: 0.9;        /* optional translucency */
     }
 
     .nav-links a { margin-left: 25px; font-weight: bold; color: var(--text); }
@@ -101,7 +107,7 @@
 
     footer { text-align: center; padding: 25px; border-top: 1px solid #222; color: #aaa; }
 
-    /* Watermark Logo Background */
+    /* Optional Watermark Logo Background */
     body::before {
       content: "";
       position: fixed;
@@ -112,9 +118,9 @@
       height: auto;
       background: url('images/logo-white.png') center/contain no-repeat;
       transform: translate(-50%, -50%);
-      opacity: 0.1;        /* subtle watermark */
-      pointer-events: none; /* clicks pass through */
-      z-index: 0;          /* behind all content */
+      opacity: 0.05;        /* subtle watermark */
+      pointer-events: none;
+      z-index: 0;
     }
 
   </style>
@@ -122,8 +128,9 @@
 
 <body>
 
-  <!-- Navbar -->
+  <!-- Navbar with Logo -->
   <div class="navbar">
+    <img src="images/logo-white.png" alt="Paradise Katering Logo" class="logo">
     <div class="nav-links">
       <a href="#menu">Menu</a>
       <a href="#services">Services</a>
@@ -192,4 +199,3 @@
 
 </body>
 </html>
-
