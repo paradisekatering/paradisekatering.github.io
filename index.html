@@ -178,6 +178,37 @@
       color: #aaa;
     }
   </style>
+  body {
+    /* Set background image */
+    background-image: url('images/logo.png');
+    
+    /* Center the logo */
+    background-position: center;
+    
+    /* Prevent tiling */
+    background-repeat: no-repeat;
+    
+    /* Make it cover entire screen */
+    background-size: contain; /* or 'cover' if you want full coverage */
+    
+    /* Make it translucent */
+    opacity: 1; /* Keep page content visible */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/logo.png') center center no-repeat;
+    background-size: contain; /* or cover */
+    opacity: 0.6; /* Adjust transparency here */
+    pointer-events: none; /* Allow clicks through the logo */
+    z-index: -1; /* Behind content */
+}
+
 </head>
 
 <body>
